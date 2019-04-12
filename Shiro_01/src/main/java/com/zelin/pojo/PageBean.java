@@ -6,6 +6,7 @@ public class PageBean {
 	//jqueryeasyui分页注意二：下面的两个变量必须叫下面的名字
 	private int total;				//代表总记录数
 	private List<Student> rows;		//代表每一页集合
+	private int totalpages;
 	public PageBean() {
 		super();
 	}
@@ -14,6 +15,21 @@ public class PageBean {
 		this.total = total;
 		this.rows = rows;
 	}
+
+	public PageBean(int total, List<Student> rows, int totalpages) {
+		this.total = total;
+		this.rows = rows;
+		this.totalpages = totalpages;
+	}
+
+	public int getTotalpages() {
+		return totalpages;
+	}
+
+	public void setTotalpages(int totalpages) {
+		this.totalpages = totalpages;
+	}
+
 	public int getTotal() {
 		return total;
 	}

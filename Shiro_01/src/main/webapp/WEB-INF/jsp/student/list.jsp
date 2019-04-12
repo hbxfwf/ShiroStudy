@@ -15,7 +15,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3>学生查询</h3>
+            <h3 class="panel-title">学生查询</h3>
         </div>
         <div class="panel-body">
             <form class="form-inline" id="form1" method="post" action="${pageContext.request.contextPath}/student/search.do">
@@ -42,7 +42,7 @@
                     <td>所在班级</td>
                     <td>操作</td>
                 </tr>
-                <c:forEach items="${students}" var="stud">
+                <c:forEach items="${pr.rows}" var="stud">
                     <tr>
                         <td>${stud.sname}</td>
                         <td>${stud.sex}</td>
@@ -55,14 +55,38 @@
                                 ${stud.classes.cname}
                         </td>
                         <td>
-                            <a class="btn btn-warning btn-sm"
+                            <a class="btn btn-primary btn-sm"
                                href="${pageContext.request.contextPath}/student/toupdate.do?sid=${stud.sid}">修改</a>
-                            <a class="btn btn-warning btn-sm"
+                            <a class="btn btn-danger btn-sm"
                                href="${pageContext.request.contextPath}/student/deleteBySid.do?sid=${stud.sid}"
                                onclick="return confirm('你真的要删除吗?')">删除</a>
                         </td>
                     </tr>
                 </c:forEach>
+                <tr>
+                    <td colspan="7">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <c:forEach begin="1" end="${pr.totalpages}" var="p">
+                                    <li class="${p == (param.page == null ? 1 : param.page) ? 'active' : ''}">
+                                        <a href="${pageContext.request.contextPath}/student/listpage.do?page=${p}">${p}</a>
+                                    </li>
+                                </c:forEach>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </td>
+
+                </tr>
             </table>
         </div>
     </div>

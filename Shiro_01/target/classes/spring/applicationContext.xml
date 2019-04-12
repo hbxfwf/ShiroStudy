@@ -16,6 +16,17 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="typeAliasesPackage" value="com.zelin.pojo"/>
 		<property name="mapperLocations" value="classpath*:mapper/*.xml"/>
+		<property name="plugins">
+			<list>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+						</value>
+					</property>
+				</bean>
+			</list>
+		</property>
 	</bean>
 	<!--通过通用mapper来扫描指定包-->
 	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">

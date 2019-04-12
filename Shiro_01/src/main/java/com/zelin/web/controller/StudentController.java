@@ -1,5 +1,6 @@
 package com.zelin.web.controller;
 
+import com.zelin.pojo.PageBean;
 import com.zelin.pojo.Student;
 import com.zelin.service.ClassesService;
 import com.zelin.service.StudentService;
@@ -10,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.naming.ldap.PagedResultsControl;
 import java.util.List;
 import java.util.Map;
 
@@ -41,6 +43,21 @@ public class StudentController {
             e.printStackTrace();
         }
         //4.返回逻辑视图
+        return "student/list";
+    }
+    /**
+     * 查询所有学生带分页功能
+     * @param page
+     * @return
+     */
+    @RequestMapping("/listpage")
+    public String listPage(@RequestParam(defaultValue = "1") int page,Model model){
+        try {
+            model.addAttribute("pr",studentSerivce.findAllStudents(page,pageSize));
+            model.addAttribute("classes",classesService.findAll());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "student/list";
     }
 

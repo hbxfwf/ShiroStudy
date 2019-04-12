@@ -35,7 +35,7 @@ public class AuthticationInterceptor extends HandlerInterceptorAdapter {
         //2.1) 得到session，并且取得当前登录的用户对象user
         SysUser user = (SysUser) request.getSession().getAttribute("user");
         //2.2) 判断是否存在此用户
-        if (null != user) {
+        if (null != user) {    //代表用户登录过
             //2.3）读取公用的用户列表(只有登录成功的用户才能访问此列表)
             List<String> commonURL = ResourcesUtil.gekeyList("commonURL");
             //2.4) 判断当前登录用户的访问url地址是否在commonURL中，是就放行

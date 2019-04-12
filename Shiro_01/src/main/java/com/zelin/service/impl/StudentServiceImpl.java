@@ -2,6 +2,8 @@ package com.zelin.service.impl;
 
 import java.util.List;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.zelin.mapper.ClassesMapper;
 import com.zelin.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +28,28 @@ public class StudentServiceImpl implements StudentService {
 		}
 		return students;
 	}
+
+	/**
+	 * 查询所有学生（带有分页功能）
+	 * @param page
+	 * @param pagesize
+	 * @return
+	 * @throws Exception
+	 */
 	@Override
 	public PageBean findAllStudents(int page,int pagesize) throws Exception {
-		//1.得到总记录数
-		int total = this.findStudents().size();
-		//2.得到每一页的记录数
-		List<Student> rows = studentMapper.selectStudentsByPage(new MyPage((page-1)*pagesize, pagesize));
-		return new PageBean(total, rows);
+		//1.开始分页
+		PageHelper.startPage(page,pagesize);
+		//2.查询得到当前分页的Page对象
+		StudentExample example = new StudentExample();
+
+		Page<Student> students = (Page<Student>) studentMapper.selectByExample(example);
+		//2.3）将当前学生结果集与班级对象相关联
+		for (Student student : students.getResult()) {
+			Classes classes = classesMapper.selectByPrimaryKey(student.getCid());
+			student.setClasses(classes);
+		}
+		return new PageBean((int)students.getTotal(), students.getResult(),students.getPages());
 	}
 	@Override
 	public PageBean findAllStudents(StudentCustom studentCustom) throws Exception {
