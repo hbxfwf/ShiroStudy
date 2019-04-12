@@ -3,7 +3,7 @@ package com.zelin.pojo;
 import java.util.List;
 
 public class PageBean {
-	//jqueryeasyui分页注意二：下面的两个变量必须叫下面的名字
+
 	private int total;				//代表总记录数
 	private List<Student> rows;		//代表每一页集合
 	private int totalpages;

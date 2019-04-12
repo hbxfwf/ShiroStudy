@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.naming.ldap.PagedResultsControl;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -61,5 +63,23 @@ public class StudentController {
         return "student/list";
     }
 
+    /**
+     * 条件查询带分页
+     * @param page
+     * @param student
+     * @return
+     */
+    @RequestMapping("/search")
+    public String search(@RequestParam(defaultValue = "1") int page, Student student, Model model){
+        try {
+            PageBean pageBean = studentSerivce.search(page,pageSize,student);
+            model.addAttribute("pr",pageBean);
+            model.addAttribute("page",page);
+            model.addAttribute("classes",classesService.findAll());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "student/list";
+    }
 }
 

@@ -65,6 +65,7 @@
                 </c:forEach>
                 <tr>
                     <td colspan="7">
+                        <%--1.分页导航--%>
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
                                 <li>
@@ -73,8 +74,9 @@
                                     </a>
                                 </li>
                                 <c:forEach begin="1" end="${pr.totalpages}" var="p">
-                                    <li class="${p == (param.page == null ? 1 : param.page) ? 'active' : ''}">
-                                        <a href="${pageContext.request.contextPath}/student/listpage.do?page=${p}">${p}</a>
+                                    <%--如何动态显示当前页的样式--%>
+                                    <li class="${p == page ? 'active' : ''}">
+                                        <a href="${pageContext.request.contextPath}/student/search.do?page=${p}">${p}</a>
                                     </li>
                                 </c:forEach>
                                 <li>

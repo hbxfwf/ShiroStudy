@@ -33,11 +33,11 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">
+                    <a href="#" class="list-group-item list-group-item-danger disabled">
                         用户菜单
                     </a>
                     <c:forEach items="${menus}" var="m">
-                        <a href="${m.url}" target="right" class="list-group-item">${m.name}</a>
+                        <a href="${m.url}" target="right" class="list-group-item tt">${m.name}</a>
                     </c:forEach>
                 </div>
             </div>
@@ -50,3 +50,14 @@
     </div>
 </body>
 </html>
+<script>
+    $(function () {
+        //切换样式
+        $(".tt").click(function () {
+           //1.将所有的list-group下的a标签下的active样式去除
+            $(".list-group a").removeClass("active");
+            //2.将当前点击的哪个a设置active样式
+            $(this).addClass("active");
+        })
+    })
+</script>

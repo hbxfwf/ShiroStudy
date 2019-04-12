@@ -24,5 +24,6 @@ public interface StudentService {
 	public void update(Student student) throws Exception;
 	//根据主键删除学生
 	public void delete(int sid) throws Exception;
-	
+
+	PageBean search(int page, int pageSize, Student student);
 }
