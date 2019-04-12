@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zelin.mapper.StudentMapper" >
+  <resultMap id="BaseResultMap" type="com.zelin.pojo.Student" >
+    <id column="sid" property="sid" jdbcType="INTEGER" />
+    <result column="sname" property="sname" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="addr" property="addr" jdbcType="VARCHAR" />
+   <!-- <result column="cid" property="cid" jdbcType="INTEGER" />  -->
+    <result column="birth" property="birth" jdbcType="DATE" />
+    <association column="cid" property="classes" javaType="com.zelin.pojo.Classes" select="findClassesByCid"/>
+    
+  </resultMap>
+  <!-- 根据班级编号得到班级信息 -->
+  <select id="findClassesByCid" parameterType="string" resultType="com.zelin.pojo.Classes">
+  		select * from classes where cid = #{cid}
+  </select>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    sid, sname, sex, age, addr, cid, birth
+  </sql>
+  <!-- 根据当前 页及每一页大小得到当前页记录 -->
+  <select id="selectStudentsByPage" parameterType="com.zelin.pojo.MyPage" resultMap="BaseResultMap">
+  	<!-- 不能在sql语句中写成#{(page-1)*pagesize},否则报错-->
+  	select * from student limit #{page},#{pagesize}
+  </select>
+  <!-- 根据查询条件进行分页查询 (查询出每一页的记录集合)-->
+  <select id="selectStudentsByPageAndWords" parameterType="StudentCustom" resultMap="BaseResultMap">
+  		select * from student 
+		<!--动态sql查询  -->
+		<where>
+			<if test="student.sname != null">
+				and sname like '%${student.sname}%'
+			</if>
+			<if test="student.addr != null">
+				and addr like '%${student.addr}%'
+			</if>
+			<if test="student.classes.cid != 0">
+				and cid = #{student.classes.cid}
+			</if>
+		</where>
+		limit #{mypage.page},#{mypage.pagesize}
+  </select>
+  
+  <select id="selectCountByWords" parameterType="com.zelin.pojo.Student" resultType="int">
+  	select count(sid) from student 
+  	<!--动态sql查询  -->
+		<where>
+			<if test="sname != null">
+				and sname like '%${sname}%'
+			</if>
+			<if test="addr != null">
+				and addr like '%${addr}%'
+			</if>
+			<if test="classes.cid != 0">
+				and cid = #{classes.cid}
+			</if>
+		</where>
+  </select>
+
+</mapper>

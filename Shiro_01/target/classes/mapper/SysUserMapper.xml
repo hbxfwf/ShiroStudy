@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zelin.mapper.SysUserMapper" >
+
+  <!-- 根据usercode查询当前用户下的所有菜单  -->
+  <select id="getMenusByUsercode" resultType="com.zelin.pojo.SysPermission" parameterType="string">
+	SELECT
+	*
+	FROM
+	sys_permission
+	WHERE TYPE = 'menu'
+	AND id IN
+	(SELECT
+	sys_permission_id
+	FROM
+	sys_role_permission
+	WHERE sys_role_id IN
+	(SELECT
+	sys_role_id
+	FROM
+	sys_user_role
+	WHERE sys_user_id IN
+	(SELECT
+	id
+	FROM
+	sys_user
+	WHERE usercode = #{value}))) 
+  </select>
+  <!-- 根据usercode查询当前用户下的所有权限  -->
+  <select id="getPermissionsByUsercode" resultType="com.zelin.pojo.SysPermission" parameterType="string">
+  SELECT
+	*
+	FROM
+	sys_permission
+	WHERE TYPE = 'permission'
+	AND id IN
+	(SELECT
+	sys_permission_id
+	FROM
+	sys_role_permission
+	WHERE sys_role_id IN
+	(SELECT
+	sys_role_id
+	FROM
+	sys_user_role
+	WHERE sys_user_id IN
+	(SELECT
+	id
+	FROM
+	sys_user
+	WHERE usercode = #{value}))) 
+  </select>
+
+</mapper>
