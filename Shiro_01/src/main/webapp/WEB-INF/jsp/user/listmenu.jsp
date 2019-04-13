@@ -9,7 +9,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/base.jsp"%>
 <style>
-
     .col-md-2{
         margin-top: 20px;
     }
@@ -20,7 +19,6 @@
         padding-left: 0px;
         margin-left: -10px;
     }
-
 </style>
 <html>
 <head>

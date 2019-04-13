@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户菜单显示</title>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入分页的样式-->
+    <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <!--1.引入angularjs的库-->
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <!--引入angularjs的分页库-->
+    <script src="../plugins/angularjs/pagination.js"></script>
+<style>
+    .col-md-2{
+        margin-top: 20px;
+    }
+    .list-group-item{
+        text-align: center;
+    }
+    .col-md-10{
+        padding-left: 0px;
+        margin-left: -10px;
+    }
+</style>
+    <script>
+        //1.定义angularjs的模块：
+        var app = angular.module("myApp",[]);
+        //2.定义控制器
+        app.controller("userController",function($scope,$http){
+            //2.0)选择菜单
+            $scope.selectMenu = (event)=>{
+                //1.将所有的list-group下的a标签下的active样式去除
+                $(".list-group a").removeClass("active");
+                //2.将当前点击的哪个a设置active样式
+                $(event.target).addClass("active");
+            }
+            //2.1)通过用户查询菜单
+            $scope.findMenuByUser = ()=>{
+                $http.get("../user/listmenu").success(response=>{
+                    $scope.list = response;
+                })
+            }
+        })
+    </script>
+<html>
+<head>
+    <title>显示菜单</title>
+</head>
+<body ng-app="myApp" ng-controller="userController" ng-init="findMenuByUser()">
+    <div class="container">
+        <!----分成左右栏-->
+        <!----1.左边显示菜单-->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-danger disabled">
+                        用户菜单
+                    </a>
+                    <a href="{{menu.url}}" target="right"
+                       class="list-group-item tt " ng-repeat="menu in list" ng-click="selectMenu($event)">{{menu.name}}</a>
+                </div>
+            </div>
+            <!--2.右边显示效果-->
+            <div class="col-md-10">
+                <iframe src="" width="1100" height="800" frameborder="0" name="right"></iframe>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+

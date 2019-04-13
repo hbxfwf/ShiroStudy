@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入分页的样式-->
+    <link rel="stylesheet" href="plugins/angularjs/pagination.css">
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <!--1.引入angularjs的库-->
+    <script src="plugins/angularjs/angular.min.js"></script>
+    <!--引入angularjs的分页库-->
+    <script src="plugins/angularjs/pagination.js"></script>
+    <style>
+        .container{
+            width: 500px;
+            margin-top: 50px;
+        }
+        .form-signin{
+            padding:5px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+        .error{
+            color:red;
+        }
+    </style>
+
+    <script>
+        //1.定义angularjs的模块：
+        let app = angular.module("myApp",[]);
+        //2.定义控制器
+        app.controller("loginController",function($scope,$http){
+            //2.1)查询所有的学生
+            $scope.login = ()=>{
+                $http.get("login?username="+$scope.username+"&password="+$scope.password).success(response=>{
+                   if (response.status){    //代表登录成功
+                       location.href = "./user/listmenu.html"
+                   } else{
+                     $scope.message = response.message;
+                   }
+                })
+            }
+        })
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="loginController">
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                用户登录
+            </h3>
+        </div>
+        <div class="panel-body">
+            <label>用户名</label>
+            <input type="text"  ng-model="username" class="form-control" placeholder="输入用户名" required autofocus>
+            <label >密码</label>
+            <input type="password" ng-model="password" class="form-control" placeholder="输入密码" required>
+            <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">登录</button>
+            <span class="error">{{message}}</span>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+</body>
+</html>

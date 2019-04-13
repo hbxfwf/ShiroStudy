@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表学生</title>
+    <style>
+        .table{
+            text-align: center;
+        }
+        .container{
+            margin-top: 20px;
+        }
+    </style>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入分页的样式-->
+    <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <!--1.引入angularjs的库-->
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <!--引入angularjs的分页库-->
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <script>
+        //1.定义angularjs的模块：
+        var app = angular.module("myApp",[]);
+        //2.定义控制器
+        app.controller("studentController",function($scope,$http){
+           //2.1)查询所有的学生
+            $scope.findAll=()=>{
+                $http.get("../student/list").success(response=>{
+                    //1.为list变量分配值
+                    $scope.list = response;
+                } )
+            }
+        })
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="studentController" ng-init="findAll()">
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">学生列表</h3>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>年龄</td>
+                <td>住址</td>
+                <td>生日</td>
+                <td>所在班级</td>
+                <td>操作</td>
+            </tr>
+
+                <tr ng-repeat="stud in list">
+                    <td>{{stud.sname}}</td>
+                    <td>{{stud.sex}}</td>
+                    <td>{{stud.age}}</td>
+                    <td>{{stud.addr}}</td>
+                    <td>
+                        {{stud.birth}}
+                    </td>
+                    <td>
+                        {{stud.classes.cname}}
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm"
+                           href="../student/toupdate?sid=${stud.sid}">修改</a>
+                        <a class="btn btn-danger btn-sm"
+                           href="../student/deleteBySid?sid=${stud.sid}"
+                           onclick="return confirm('你真的要删除吗?')">删除</a>
+                    </td>
+                </tr>
+
+
+        </table>
+    </div>
+</div>
+<script>
+    //执行提交 表单
+    function skip(i) {
+        //1.对表单中的隐藏域赋值
+        $("#page").val(i);
+        //2.提交表单
+        $("#form1").submit();
+    }
+    //添加学生
+    function addStudent() {
+        location.href = "${pageContext.request.contextPath}/student/toadd.do";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户权限</title>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入分页的样式-->
+    <link rel="stylesheet" href="../plugins/angularjs/pagination.css">
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <!--1.引入angularjs的库-->
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <!--引入angularjs的分页库-->
+    <script src="../plugins/angularjs/pagination.js"></script>
+    <style>
+        .list-group{
+            width: 300px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+    </style>
+    <script>
+        //1.定义angularjs的模块：
+        var app = angular.module("myApp",[]);
+        //2.定义控制器
+        app.controller("roleController",function($scope,$http){
+            //2.1)查询所有的权限
+            $scope.findAll=()=>{
+                $http.get("../role/list").success(response=>{
+                    $scope.list = response;
+
+                    findRolesByUser();
+                })
+            }
+            //2.2)根据当前用户取出其角色列表
+            findRolesByUser = ()=>{
+                $http.get("../role/findRolesByUser").success(response =>{
+                    $scope.roleList = response;
+                    //遍历$scope.roleList与$scope.list两个集合，选中复选框
+                    if ($scope.list.length > 0 && $scope.roleList.length > 0) 
+                    for (var i = 0;i  < $scope.list.length;i++){
+                        $scope.list[i]["result"] = false;
+                        var role = $scope.list[i];
+                        for (var j = 0; j < response.length;j++){
+                            var roleUser = response[j];
+                            if (role.id ==roleUser.sysRoleId){
+                                $scope.list[i]["result"] = true;
+                                //如果两个id相等先放到角色id数组中
+                                $scope.sysRoleIds.push(role.id)
+                            }
+                        }
+                    }
+                } )
+            }
+            //定义所选择的角色id数组
+            $scope.sysRoleIds = [];
+            $scope.selectRole=(roleId,event)=>{
+                if(event.target.checked){   //如果选择了某个角色就将其放到角色id数组中
+                    $scope.sysRoleIds.push(roleId);
+                }else{                      //否则，就从角色id数组中删除它
+                    $scope.sysRoleIds.splice($scope.sysRoleIds.indexOf(roleId),1)
+                }
+            }
+            //3.修改角色
+            $scope.changeRole = ()=>{
+
+                //将角色id数组提交到后台
+               $http.get("../role/changeRole?sysRoleIds="+$scope.sysRoleIds).success(response=>{
+                    if (!response.status){   //修改失败
+                        alert(response.message);
+                    }
+                })
+            }
+        })
+     </script>
+
+</head>
+<body ng-app="myApp" ng-controller="roleController" ng-init="findAll()">
+{{sysRoleIds}}---
+
+        <ul class="list-group">
+            <li class="list-group-item" >{{name}}
+            <li class="list-group-item" ng-repeat="role in list ">
+            {{role.id}}
+               <!--<input type="checkbox"   ng-checked="role.result" ng-model="sysRoleIds[$index]"-->
+                      <!--ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}-->
+                    <input type="checkbox"   ng-checked="role.result" ng-click="selectRole(role.id,$event)"
+                        ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}
+            </li>
+            <li class="list-group-item" >
+                <input type="button" value="更改权限" class="btn btn-primary btn-sm" ng-click="changeRole()">
+            </li>
+        </ul>
+</body>
+</html>

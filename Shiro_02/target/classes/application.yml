@@ -1,0 +1,6 @@
+server:
+  port: 9000
+
+#配置mybatis的内容
+mybatis:
+  mapper-locations: mapper/*.xml
