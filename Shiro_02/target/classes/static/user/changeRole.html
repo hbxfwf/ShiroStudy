@@ -77,16 +77,15 @@
 
 </head>
 <body ng-app="myApp" ng-controller="roleController" ng-init="findAll()">
-{{sysRoleIds}}---
-
         <ul class="list-group">
             <li class="list-group-item" >{{name}}
             <li class="list-group-item" ng-repeat="role in list ">
-            {{role.id}}
+
                <!--<input type="checkbox"   ng-checked="role.result" ng-model="sysRoleIds[$index]"-->
                       <!--ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}-->
                     <input type="checkbox"   ng-checked="role.result" ng-click="selectRole(role.id,$event)"
-                        ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}
+                        ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}<br>
+            {{role.id}}
             </li>
             <li class="list-group-item" >
                 <input type="button" value="更改权限" class="btn btn-primary btn-sm" ng-click="changeRole()">

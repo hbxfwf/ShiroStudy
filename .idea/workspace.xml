@@ -2,313 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b7db77-d891-49ed-98d2-4d3d1023f309" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_extra_1_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/Shiro_02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/ShiroApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/config/DruidConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/config/MyConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/HelloContoller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/interceptor/AuthticationInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/ClassesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/SysPermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/SysRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/SysRolePermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/SysUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/mapper/SysUserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/Classes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/ClassesExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/MyPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/PageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/StudentCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/StudentExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysPermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysPermissionExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysRoleExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysRolePermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysRolePermissionExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysUserExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysUserRoleExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/pojo/SysUserRoleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/ClassesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/SysUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/UserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/impl/ClassesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/service/impl/UserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/utils/AjaxResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/utils/CommUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/utils/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/utils/ResourcesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/druid.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/AdminLTE.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-bootstrap-social.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-bootstrap-social.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-without-plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/alt/AdminLTE-without-plugins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/_all-skins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/_all-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-black-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-black-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-black.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-black.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-blue.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-green-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-green-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-green.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-purple.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-red-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-red-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-red.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow-light.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/css/skins/skin-yellow.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/avatar04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/avatar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/avatar3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/avatar5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/boxed-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/boxed-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/american-express.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/cirrus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/mastercard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/mestro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/paypal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/paypal2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/credit/visa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/default-50x50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/photo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/photo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/photo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/photo4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user1-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user2-160x160.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user3-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user5-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user6-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user7-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/img/user8-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/js/app.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/js/pages/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/adminLTE/js/pages/dashboard2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/angularjs/angular-animate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/angularjs/angular-route.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/angularjs/angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/angularjs/pagination.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/angularjs/pagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/images/arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/jQuery/jquery-2.2.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/js/base-pagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/js/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/js/studentController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/js/studentService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/.bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/angular-select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/component.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/release.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2-spinner.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2.jquery.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_en.js.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_pt-PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_rs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2_locale_zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/plugins/select2/select2x2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/resure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/student/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/changeRole.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/listmenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_miemiedev_mybatis_paginator_1_2_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_miemiedev_mybatis_paginator_1_2_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_32.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_32.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jms_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_4_1_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_4_1_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/Shiro_01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/Shiro_01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/src/main/java/com/zelin/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/src/main/java/com/zelin/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/src/main/webapp/WEB-INF/jsp/student/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/src/main/webapp/WEB-INF/jsp/student/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/src/main/webapp/WEB-INF/jsp/user/listmenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/src/main/webapp/WEB-INF/jsp/user/listmenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/classes/com/zelin/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/classes/com/zelin/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/tomcat/logs/access_log.2019-04-12" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/tomcat/logs/access_log.2019-04-12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/user/listmenu_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/user/listmenu_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/user/listmenu_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_01/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/user/listmenu_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/changeRole.html" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/changeRole.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Shiro_01/target/" />
     <ignored path="$PROJECT_DIR$/Shiro_02/target/" />
@@ -335,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/changeRole.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="281">
+              <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -371,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/RoleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-161">
-              <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+            <state relative-caret-position="382">
+              <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -420,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/config/MyConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="301">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="14" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -553,7 +248,72 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zelin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zelin" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shiro_02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zelin" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,7 +325,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555157847627" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555158996055" />
     <property name="jdk.selected.JAVA_MODULE" value="1.7" />
     <property name="last_opened_file_path" value="E:/apache-tomcat-7.0.40/lib/tomcat-util.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -692,12 +452,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555032387250</updated>
       <workItem from="1555032389842" duration="25592000" />
-      <workItem from="1555113695910" duration="34308000" />
+      <workItem from="1555113695910" duration="35435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59900000" />
+    <option name="totallyTimeSpent" value="61027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,9 +478,9 @@
       <window_info id="Favorites" order="3" sideWeight="0.5021552" side_tool="true" weight="0.25" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.8426724" visible="true" weight="0.16691843" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8426724" visible="true" weight="0.23716012" />
       <window_info id="Structure" order="7" sideWeight="0.15732759" side_tool="true" weight="0.26963747" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.34179357" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.13197969" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32994923" />
@@ -731,7 +491,7 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="Run" order="10" weight="0.41455162" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.17089678" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4179357" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32994923" />
@@ -1111,16 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/config/MyConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/resources/anonymousURL.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1169,15 +919,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/controller/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+        <state relative-caret-position="382">
+          <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/java/com/zelin/config/MyConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="14" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shiro_02/src/main/resources/static/user/changeRole.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        <state relative-caret-position="281">
+          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
         </state>
       </provider>
     </entry>
