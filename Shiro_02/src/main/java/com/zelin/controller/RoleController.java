@@ -58,34 +58,26 @@ public class RoleController {
 
     /**
      * 根据当前登录用户查询出其关联的角色
-     * @param session
      * @return
      */
     @RequestMapping("/findRolesByUser")
-    public List<SysUserRole> findRolesByUser(HttpSession session){
-        Object object = session.getAttribute("user");
-        if(object != null){
-            SysUser user = (SysUser) object;
-            List<SysUserRole> userRoles = userRoleService.findUserRole(user.getUsercode());
-            return userRoles;
-        }
-        return null;
+    public List<SysUserRole> findRolesByUser(String sysUserId){
+
+       List<SysUserRole> userRoles = userRoleService.findUserRole(sysUserId);
+       return userRoles;
+
 
     }
 
     /**
      * 修改权限
      * @param sysUserRoleVo
-     * @param session
      * @return
      */
     @RequestMapping("/changeRole")
-    public AjaxResult changeRole(SysUserRoleVo sysUserRoleVo,HttpSession session){
+    public AjaxResult changeRole(SysUserRoleVo sysUserRoleVo){
         try {
-            SysUser user = (SysUser) session.getAttribute("user");
-            if(user != null){
-                sysUserRoleVo.setSysUserId(user.getId());
-            }
+
             userRoleService.update(sysUserRoleVo);
             return new AjaxResult("修改权限成功",true);
         } catch (Exception e) {

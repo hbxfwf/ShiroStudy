@@ -19,9 +19,8 @@ public class MyConfiguration implements WebMvcConfigurer {
     //注册拦截器（springboot拦截器与springmvc不一样，还会拦截静态资源 ）
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authticationInterceptor).addPathPatterns("/student/**","/user/**")
-                .excludePathPatterns("/bootstrap-3.3.7-dist/**",
-                        "/plugins/**","/**/*.html");
+        registry.addInterceptor(authticationInterceptor).addPathPatterns("**")
+                .excludePathPatterns("/static/**");
 
     }
     /**

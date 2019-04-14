@@ -30,50 +30,44 @@
                 $http.get("../role/list").success(response=>{
                     $scope.list = response;
 
+                    findRolesByUser();
                 })
             }
-            //2.2)查询所有用户
-            $scope.findUsers=()=>{
-                $http.get("../user/userlist").success(response=>{
-                    $scope.users=response;
-                })
-            }
-            //2.2)根据当前用户取出其角色列表(当选择某个用户时就可以选择其对应的角色)
-            $scope.findRolesByUser = ()=>{
-                $http.get("../role/findRolesByUser?sysUserId="+$scope.sysUserId).success(response =>{
+            //2.2)根据当前用户取出其角色列表
+            findRolesByUser = ()=>{
+                $http.get("../role/findRolesByUser").success(response =>{
                     $scope.roleList = response;
-                    //定义所选择的角色id数组
-                    $scope.sysRoleIds = [];
                     //遍历$scope.roleList与$scope.list两个集合，选中复选框
                     if ($scope.list.length > 0 && $scope.roleList.length > 0) 
                     for (var i = 0;i  < $scope.list.length;i++){
-                        $scope.sysRoleIds[i]=0
+                        $scope.list[i]["result"] = false;
+                        var role = $scope.list[i];
                         for (var j = 0; j < response.length;j++){
-                            if ($scope.list[i].id ==response[j].sysRoleId){
+                            var roleUser = response[j];
+                            if (role.id ==roleUser.sysRoleId){
+                                $scope.list[i]["result"] = true;
                                 //如果两个id相等先放到角色id数组中
-                                //$scope.sysRoleIds.push(role.id)
-                                $scope.sysRoleIds[i]=role.id;
+                                $scope.sysRoleIds.push(role.id)
                             }
                         }
                     }
                 } )
             }
-
-            // $scope.selectRole=(roleId,event)=>{
-            //     if(event.target.checked){   //如果选择了某个角色就将其放到角色id数组中
-            //         $scope.sysRoleIds.push(roleId);
-            //     }else{                      //否则，就从角色id数组中删除它
-            //         $scope.sysRoleIds.splice($scope.sysRoleIds.indexOf(roleId),1)
-            //     }
-            // }
+            //定义所选择的角色id数组
+            $scope.sysRoleIds = [];
+            $scope.selectRole=(roleId,event)=>{
+                if(event.target.checked){   //如果选择了某个角色就将其放到角色id数组中
+                    $scope.sysRoleIds.push(roleId);
+                }else{                      //否则，就从角色id数组中删除它
+                    $scope.sysRoleIds.splice($scope.sysRoleIds.indexOf(roleId),1)
+                }
+            }
             //3.修改角色
             $scope.changeRole = ()=>{
 
                 //将角色id数组提交到后台
-               $http.get("../role/changeRole?sysRoleIds="+$scope.sysRoleIds+"&sysUserId="+$scope.sysUserId).success(response=>{
-                    if (response.status){  //修改成功就跳转到登录页面
-                        parent.location.href = "/login.html"
-                    }else{          //修改失败
+               $http.get("../role/changeRole?sysRoleIds="+$scope.sysRoleIds).success(response=>{
+                    if (!response.status){   //修改失败
                         alert(response.message);
                     }
                 })
@@ -82,20 +76,15 @@
      </script>
 
 </head>
-<body ng-app="myApp" ng-controller="roleController" ng-init="findAll();findUsers()">
-{{sysRoleIds}}--{{sysUserId}}
+<body ng-app="myApp" ng-controller="roleController" ng-init="findAll()">
         <ul class="list-group">
-            <li class="list-group-item" >
-                请选择用户：
-                <select ng-model="sysUserId" class="form-control" ng-change="findRolesByUser()"
-                        ng-options="u.id as u.username for u in users"></select>
-            </li>
+            <li class="list-group-item" >{{name}}
             <li class="list-group-item" ng-repeat="role in list ">
 
                <!--<input type="checkbox"   ng-checked="role.result" ng-model="sysRoleIds[$index]"-->
                       <!--ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}-->
-                    <input type="checkbox"   ng-model="sysRoleIds[$index]"
-                        ng-true-value="{{role.id}}" ng-false-value="0">{{role.name}}<br>
+                    <input type="checkbox"   ng-checked="role.result" ng-click="selectRole(role.id,$event)"
+                        ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}<br>
             {{role.id}}
             </li>
             <li class="list-group-item" >

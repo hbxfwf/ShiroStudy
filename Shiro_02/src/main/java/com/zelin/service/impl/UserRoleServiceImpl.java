@@ -47,11 +47,14 @@ public class UserRoleServiceImpl implements UserRoleService {
 		//2.在sys_user_id表中添加记录
 		List<String> sysRoleIds = sysUserRoleVo.getSysRoleIds();
 		for (String roleId : sysRoleIds) {
-			SysUserRole userRole = new SysUserRole();
-			userRole.setId(CommUtils.createUUID());
-			userRole.setSysRoleId(roleId);
-			userRole.setSysUserId(sysUserRoleVo.getSysUserId());
-			userRoleMapper.insert(userRole );
+			if(!roleId.equals("0")){
+
+				SysUserRole userRole = new SysUserRole();
+				userRole.setId(CommUtils.createUUID());
+				userRole.setSysRoleId(roleId);
+				userRole.setSysUserId(sysUserRoleVo.getSysUserId());
+				userRoleMapper.insert(userRole );
+			}
 		}
 	}
 

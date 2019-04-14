@@ -2,6 +2,8 @@ package com.zelin.controller;
 
 import com.zelin.pojo.SysPermission;
 import com.zelin.pojo.SysUser;
+import com.zelin.service.SysUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +20,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+    @Autowired
+    private SysUserService userService;
     /**
      * 根据登录用户动态显示菜单
      * @param session
@@ -41,6 +44,18 @@ public class UserController {
         return null;
     }
 
-   // @RequestMapping("/touserlist")
+    /**
+     * 查询所有用户
+     * @return
+     */
+    @RequestMapping("/userlist")
+    public List<SysUser> findUsers(){
+        try {
+            return userService.findUsers();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
