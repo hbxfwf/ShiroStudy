@@ -57,27 +57,23 @@ public class RoleController {
     }
 
     /**
-     * 根据当前登录用户查询出其关联的角色
+     * 根据当前选择用户查询出其关联的角色
      * @return
      */
     @RequestMapping("/findRolesByUser")
     public List<SysUserRole> findRolesByUser(String sysUserId){
-
        List<SysUserRole> userRoles = userRoleService.findUserRole(sysUserId);
        return userRoles;
-
-
     }
 
     /**
-     * 修改权限
+     * 修改角色
      * @param sysUserRoleVo
      * @return
      */
     @RequestMapping("/changeRole")
     public AjaxResult changeRole(SysUserRoleVo sysUserRoleVo){
         try {
-
             userRoleService.update(sysUserRoleVo);
             return new AjaxResult("修改权限成功",true);
         } catch (Exception e) {
