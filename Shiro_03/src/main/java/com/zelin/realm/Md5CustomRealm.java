@@ -12,7 +12,7 @@ import org.apache.shiro.util.ByteSource;
 /**
  * @Author: Feng.Wang
  * @Company: Zelin.ShenZhen
- * @Description:
+ * @Description: 自定义Realm加盐
  * @Date: Create in 2019/4/15 11:34
  */
 public class Md5CustomRealm extends AuthorizingRealm {

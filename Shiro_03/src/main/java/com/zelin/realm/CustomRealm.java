@@ -13,26 +13,12 @@ import org.junit.Test;
 
 /**
  * @Author: Feng.Wang
+ * @Date: 2019/4/15 12:36
  * @Company: Zelin.ShenZhen
- * @Description:
- * @Date: Create in 2019/4/15 10:54
- */
+ * @ClassName: CustomRealm
+ * @Description: 
+*/
 public class CustomRealm extends AuthorizingRealm {
-    //加盐测试
-    @Test
-    public void testAddSalt(){
-        String salt = "rbtwy";				//加的盐值
-        String oldPassword = "111111";		//原始密码
-        int hashIterations = 1;				//代表加密次数
-        //加密算法一：
-        Md5Hash md5Hash = new Md5Hash(oldPassword,salt,hashIterations);
-        System.out.println(md5Hash);
-        //加密算法二：
-        SimpleHash simpleHash = new SimpleHash("md5",oldPassword,salt,hashIterations);
-        System.out.println(simpleHash.toString());
-    }
-
-
     //授权的方法
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {

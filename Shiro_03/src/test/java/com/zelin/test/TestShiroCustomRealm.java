@@ -4,6 +4,8 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.config.IniSecurityManagerFactory;
+import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.subject.Subject;
 import org.junit.Test;
@@ -15,6 +17,21 @@ import org.junit.Test;
  * @Date: Create in 2019/4/15 11:07
  */
 public class TestShiroCustomRealm {
+
+    //加盐测试
+    @Test
+    public void testAddSalt(){
+        String salt = "rbtwy";				//加的盐值
+        String oldPassword = "111111";		//原始密码
+        int hashIterations = 1;				//代表加密次数
+        //加密算法一：
+        Md5Hash md5Hash = new Md5Hash(oldPassword,salt,hashIterations);
+        System.out.println(md5Hash);
+        //加密算法二：
+        SimpleHash simpleHash = new SimpleHash("md5",oldPassword,salt,hashIterations);
+        System.out.println(simpleHash.toString());
+    }
+
     @Test
     public void test01(){
         //1.根据ini文件得到SecurityManagerFactory对象
