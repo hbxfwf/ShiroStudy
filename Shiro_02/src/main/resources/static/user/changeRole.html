@@ -25,7 +25,7 @@
         var app = angular.module("myApp",[]);
         //2.定义控制器
         app.controller("roleController",function($scope,$http){
-            //2.1)查询所有的权限
+            //2.1)查询所有的角色
             $scope.findAll=()=>{
                 $http.get("../role/list").success(response=>{
                     $scope.list = response;
@@ -39,42 +39,29 @@
                     $scope.users=response;
                 })
             }
+
             //2.2)根据当前用户取出其角色列表
             $scope.findRolesByUser = ()=>{
                 $http.get("../role/findRolesByUser?sysUserId="+$scope.sysUserId).success(response =>{
-                    $scope.roleList = response;
-                    //定义所选择的角色id数组
-                    $scope.sysRoleIds = [];
-                    //$scope.sysRoleIds.length=$scope.roleList.length
-                    //遍历$scope.roleList与$scope.list两个集合，选中复选框
-                    if ($scope.list.length > 0 && $scope.roleList.length > 0) 
-                    for (var i = 0;i  < $scope.list.length;i++){
-                        //$scope.list[i]["result"] = false;
-                        //var role = $scope.list[i];
-                        $scope.sysRoleIds[i]=0
-                        for (var j = 0; j < response.length;j++){
-                            //var roleUser = response[j];
-                            if ($scope.list[i].id ==response[j].sysRoleId){
-                                //$scope.list[i]["result"] = true;
-                                //如果两个id相等先放到角色id数组中
-                                //$scope.sysRoleIds.push(role.id)
-                                $scope.sysRoleIds[i]=$scope.list[i].id;
-                            }
-                        }
-                    }
+                    $scope.sysRoleIds = response;
+                    // $scope.roleList = response;
+                    // //定义所选择的角色id数组
+                    // $scope.sysRoleIds = [];
+                    // //遍历$scope.roleList与$scope.list两个集合，选中复选框
+                    // if ($scope.list.length > 0 && $scope.roleList.length > 0)
+                    // for (var i = 0;i  < $scope.list.length;i++){
+                    //     $scope.sysRoleIds[i]=0
+                    //     for (var j = 0; j < response.length;j++){
+                    //         if ($scope.list[i].id ==response[j].sysRoleId){
+                    //             //如果两个id相等先放到角色id数组中
+                    //             $scope.sysRoleIds[i]=$scope.list[i].id;
+                    //         }
+                    //     }
+                    // }
                 } )
             }
-
-            // $scope.selectRole=(roleId,event)=>{
-            //     if(event.target.checked){   //如果选择了某个角色就将其放到角色id数组中
-            //         $scope.sysRoleIds.push(roleId);
-            //     }else{                      //否则，就从角色id数组中删除它
-            //         $scope.sysRoleIds.splice($scope.sysRoleIds.indexOf(roleId),1)
-            //     }
-            // }
             //3.修改角色
             $scope.changeRole = ()=>{
-
                 //将角色id数组提交到后台
                $http.get("../role/changeRole?sysRoleIds="+$scope.sysRoleIds+"&sysUserId="+$scope.sysUserId).success(response=>{
                     if (response.status){  //修改成功就跳转到登录页面
@@ -85,10 +72,12 @@
                 })
             }
         })
+
      </script>
 
 </head>
 <body ng-app="myApp" ng-controller="roleController" ng-init="findAll();findUsers()">
+{{sysRoleIds}}
         <ul class="list-group">
             <li class="list-group-item" >
                 请选择用户：
@@ -96,12 +85,9 @@
                         ng-options="u.id as u.username for u in users"></select>
             </li>
             <li class="list-group-item" ng-repeat="role in list ">
-
-               <!--<input type="checkbox"   ng-checked="role.result" ng-model="sysRoleIds[$index]"-->
-                      <!--ng-true-value="{{role.id}}" ng-false-value="">{{role.name}}-->
-                    <input type="checkbox"   ng-model="sysRoleIds[$index]"
-                        ng-true-value="{{role.id}}" ng-false-value="0">{{role.name}}<br>
-            {{role.id}}
+                    <input  type="checkbox"   ng-model="sysRoleIds[$index]"
+                            ng-true-value="{{role.id}}" ng-false-value="0">{{role.name}}<br>
+                    {{role.id}}
             </li>
             <li class="list-group-item" >
                 <input type="button" value="更改权限" class="btn btn-primary btn-sm" ng-click="changeRole()">

@@ -64,7 +64,6 @@
             }
             //3.修改角色
             $scope.changeRole = ()=>{
-
                 //将角色id数组提交到后台
                $http.get("../role/changeRole?sysRoleIds="+$scope.sysRoleIds).success(response=>{
                     if (!response.status){   //修改失败

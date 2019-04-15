@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.*;
  * @Company: Zelin.ShenZhen
  * @Description:
  * @Date: Create in 2019/4/13 11:50
+ * 注意：springboot从2.0开始拦截静态资源，而以前的拦截器不拦截静态资源
  */
 @Configuration
 public class MyConfiguration implements WebMvcConfigurer {
@@ -19,8 +20,8 @@ public class MyConfiguration implements WebMvcConfigurer {
     //注册拦截器（springboot拦截器与springmvc不一样，还会拦截静态资源 ）
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authticationInterceptor).addPathPatterns("**")
-                .excludePathPatterns("/static/**");
+        //.addPathPatterns("**")：这里只能写成**,不能写成原来的/**,否则，静态资源仍不放行。
+        registry.addInterceptor(authticationInterceptor).addPathPatterns("**").excludePathPatterns("/static/**");
 
     }
     /**

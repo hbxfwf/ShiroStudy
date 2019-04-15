@@ -33,6 +33,7 @@ public class UserRoleServiceImpl implements UserRoleService {
 		//2.查询用户角色信息并返回
 		return userRoleMapper.selectByExample(example);
 	}
+	//修改角色
 	@Override
 	public void update(SysUserRoleVo sysUserRoleVo) {
 		//1.根据sys_user_id删除sys_user_role这张表中的记录
@@ -48,7 +49,6 @@ public class UserRoleServiceImpl implements UserRoleService {
 		List<String> sysRoleIds = sysUserRoleVo.getSysRoleIds();
 		for (String roleId : sysRoleIds) {
 			if(!roleId.equals("0")){
-
 				SysUserRole userRole = new SysUserRole();
 				userRole.setId(CommUtils.createUUID());
 				userRole.setSysRoleId(roleId);

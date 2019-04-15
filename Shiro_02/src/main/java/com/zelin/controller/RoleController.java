@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -57,15 +58,43 @@ public class RoleController {
     }
 
     /**
-     * 根据当前选择用户查询出其关联的角色
+     * 根据当前选择用户查询出其关联的角色(得到sysRoleIds这个数组是在前台进行)
+     * @return
+     */
+//    @RequestMapping("/findRolesByUser")
+//    public List<SysUserRole> findRolesByUser(String sysUserId){
+//       List<SysUserRole> userRoles = userRoleService.findUserRole(sysUserId);
+//       return userRoles;
+//    }
+
+
+    /**
+     * 根据当前选择用户查询出其关联的角色(得到sysRoleIds这个数组在后台这里进行),
+     * 注意：这里得到的是某个用户的roleId集合
      * @return
      */
     @RequestMapping("/findRolesByUser")
-    public List<SysUserRole> findRolesByUser(String sysUserId){
-       List<SysUserRole> userRoles = userRoleService.findUserRole(sysUserId);
-       return userRoles;
+    public List<String> findRolesByUser(String sysUserId){
+        List<String>  sysRoleIds = new ArrayList<>();
+        try {
+            //1.根据当前选择的用户得到对应的用户角色集合
+            List<SysUserRole> userRoles = userRoleService.findUserRole(sysUserId);
+            //2.查询所有的角色集合，同时遍历userRoles，如果二者的roleId相等，就放此roleid到sysRoleIds，否则，放0
+            for (int i=0;i< roleService.findRoles().size();i++) {
+                SysRole role = roleService.findRoles().get(i);
+                sysRoleIds.add("0");
+                for (int j = 0;j < userRoles.size();j++) {
+                    SysUserRole userRole = userRoles.get(j);
+                    if(userRole.getSysRoleId().equals(role.getId())){
+                        sysRoleIds.set(i,role.getId());
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return sysRoleIds;
     }
-
     /**
      * 修改角色
      * @param sysUserRoleVo
