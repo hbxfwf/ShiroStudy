@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--0.开启aop注解-->
+    <aop:config proxy-target-class="true"/>
+    <!-- springmvc 处理异常-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!--映射当授权出错后跳转到的逻辑错误页面/WEB-INF/jsp/refuse.jsp-->
+                <prop key="org.apache.shiro.authz.UnauthorizedException">refuse</prop>
+                <prop key="org.apache.shiro.authz.UnauthenticatedException">refuse</prop>
+            </props>
+        </property>
+    </bean>
+    <!--1.添加对控制器的扫描-->
+    <context:component-scan base-package="com.zelin.controller"/>
+    <!--2.添加处理器映射器与处理器适配器-->
+    <mvc:annotation-driven/>
+    <!--3.添加视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+</beans>

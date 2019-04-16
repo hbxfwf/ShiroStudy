@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--0.开启shiro对注解的支持-->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="mySecurityManager"/>
+    </bean>
+    <!--1.定义shiro的工厂bean对象-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <!--1.1）代表表单登录时的提交地址(登录页面处理器、同时也是显示登录页面的处理器)-->
+        <property name="loginUrl" value="/login.do"/>
+        <!--1.2）代表登录成功后跳转到的页面,默认行为是登录成功后会自动访问上一次访问的页面，所以此属性可不配-->
+        <property name="successUrl" value="/user/listmenu.do"/>
+        <!--1.3)配置认证失败后跳转的页面-->
+        <property name="unauthorizedUrl" value="/resure.html"/>
+        <!--1.4)引用一个securityManager对象-->
+        <property name="securityManager" ref="mySecurityManager"/>
+        <!--1.5)定义过滤器链-->
+        <!--shiro自带的常用过滤器如下：-->
+        <!--anon:例子/admins/**=anon 没有参数，表示可以匿名使用。-->
+        <!--authc:例如/admins/user/**=authc表示需要认证(登录)才能使用，FormAuthenticationFilter是表单认证，没有参数-->
+        <!--roles：例子/admins/user/**=roles[admin],参数可以写多个，多个时必须加上引号，并且参数之间用逗号分割，当有多个参数时，例如admins/user/**=roles["admin,guest"],每个参数通过才算通过，相当于hasAllRoles()方法。-->
+        <!--perms：例子/admins/user/**=perms[user:add:*],参数可以写多个，多个时必须加上引号，并且参数之间用逗号分割，例如/admins/user/**=perms["user:add:*,user:modify:*"]，当有多个参数时必须每个参数都通过才通过，想当于isPermitedAll()方法。-->
+        <!--user:例如/admins/user/**=user没有参数表示必须存在用户, 身份认证通过或通过记住我认证通过的可以访问，当登入操作时不做检查-->
+        <!--Logout:代表退出过滤器，此url的action可以不定义，由shiro自动销毁session-->
+        <property name="filterChainDefinitions">
+            <value>
+                <!-- 配置可以匿名访问的资源 -->
+                /bootstrap-3.3.7-dist/** = anon
+                <!-- 退出系统 -->
+                /logout.do = logout
+                <!-- 对验证码进行放行 -->
+                /validatecode.jsp = anon
+
+                <!--对用户进行权限拦截（授权）-->
+                <!--说明：=号左边是要访问的资源，=右右边是对应的权限标识符(权限表中的percode字段)
+                    这种方式授权原理：会将perms[student:tolist]里面的权限拿来与自定义realm中的授权方法
+                    中从数据库中取得的权限进行比对，如果在其中有这个权限，就通过，否则，就到达由
+                    <property name="unauthorizedUrl" value="/resure.html"/>属性指定的页面。
+                -->
+                <!--/student/tolist.do = perms["student:tolist"]-->
+                <!--/student/add.do = perms["student:create"]-->
+                <!--
+					/** = authc 代表系统所有资源需要经过系统认证才能访问，这个顺序放最后
+				-->
+                /** = authc
+            </value>
+        </property>
+        <!--1.6)配置自定义表单过滤器-->
+        <property name="filters">
+            <map>
+                <!--将shiro中原来自带的authc这个过滤器用我们自定义的过滤器代替掉-->
+                <entry key="authc" value-ref="customFormFilter"/>
+            </map>
+        </property>
+    </bean>
+    <!--2.定义SecurityManager对象-->
+    <bean id="mySecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--2.1)添加自定义realm-->
+        <property name="realm" ref="customRealm"/>
+        <!--2.2）添加缓存管理器-->
+        <property name="cacheManager" ref="cacheManager"/>
+    </bean>
+    <!--3.构造自定义Realm对象-->
+    <bean id="customRealm" class="com.zelin.realm.CustomRealm">
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+    </bean>
+    <!--4.定义凭证匹配器-->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <!--4.1)配置加密算法-->
+        <property name="hashAlgorithmName" value="md5"/>
+        <!--4.2）配置加密次数-->
+        <property name="hashIterations" value="1"/>
+    </bean>
+    <!--5.配置缓存管理器-->
+    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:cache/shiro-cache.xml"/>
+    </bean>
+    <!--6.自定义表单过滤器-->
+    <bean id="customFormFilter" class="com.zelin.filter.CustomFormFilter">
+        <!--6.1)代表更改表单中的用户名的name属性为uname,默认为username-->
+        <!--<property name="usernameParam" value="uname"/>-->
+        <!--6.2)代表更改表单中的密码的name属性为pwd,默认为password-->
+        <!--<property name="passwordParam" value="pwd"/>-->
+        <!--6.3)代表更改出错后放到request的默认的错误key的名称，默认叫shiroLoginFailre-->
+        <!--<property name="failureKeyAttribute" value="errorKey"/>-->
+    </bean>
+</beans>

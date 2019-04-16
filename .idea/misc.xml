@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Shiro_01" />
+    <file type="web" url="file://$PROJECT_DIR$/Shiro_04" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/Shiro_01/pom.xml" />
         <option value="$PROJECT_DIR$/Shiro_02/pom.xml" />
         <option value="$PROJECT_DIR$/Shiro_03/pom.xml" />
+        <option value="$PROJECT_DIR$/Shiro_04/pom.xml" />
       </list>
     </option>
   </component>
