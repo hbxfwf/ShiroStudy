@@ -7,8 +7,13 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_29.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_12_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/logs/access_log.2019-04-17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/refuse_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/Shiro_05.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/shiro.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/java/com/zelin/ShiroApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/java/com/zelin/config/ShiroConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/java/com/zelin/controller/LogController.java" afterDir="false" />
@@ -83,6 +88,94 @@
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/webapp/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/webapp/refuse.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Shiro_05/src/main/webapp/validatecode.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/cache/shiro-cache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/ShiroApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/config/ShiroConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/controller/LogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/controller/StudentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/exception/MyException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/exception/MyExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/filter/CustomFormFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/ClassesMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/StudentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/SysPermissionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/SysRoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/SysRolePermissionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/SysUserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/mapper/SysUserRoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/Classes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/ClassesExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/ClassesExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/ClassesExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/ClassesExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/MyPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/PageBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/Student.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/StudentCustom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/StudentExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/StudentExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/StudentExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/StudentExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysPermission.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysPermissionExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysPermissionExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysPermissionExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysPermissionExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRoleExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRoleExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRoleExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRoleExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRolePermission.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRolePermissionExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRolePermissionExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRolePermissionExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysRolePermissionExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRoleExample$Criteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRoleExample$Criterion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRoleExample$GeneratedCriteria.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRoleExample.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/pojo/SysUserRoleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/realm/CustomRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/ClassesService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/StudentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/SysUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/UserRoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/impl/ClassesServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/impl/StudentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/impl/SysUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/service/impl/UserRoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/utils/AjaxResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/utils/CommUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/utils/MD5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/com/zelin/utils/ResourcesUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/mapper/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/classes/static/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shiro_05/第五章 Shiro+SpringBoot整合开发.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -111,7 +204,7 @@
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/classes/spring/applicationContext-shiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_04/target/classes/spring/applicationContext-shiro.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/logs/access_log.2019-04-16" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/error_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/error_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/error_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/refuse_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/login_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/login_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shiro_04/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/student/list_jsp.java" afterDir="false" />
@@ -147,8 +240,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shiro_05/src/main/java/com/zelin/config/ShiroConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+            <state relative-caret-position="107">
+              <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -383,87 +476,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShiroProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shiro_05" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -476,7 +489,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555485147796" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555485452120" />
     <property name="jdk.selected.JAVA_MODULE" value="1.7" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Shiro_05/src/main/webapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
@@ -487,12 +500,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp" />
-      <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp\jsp" />
-      <recent name="D:\ShiroProjects\Shiro_05\src\main\java\com\zelin" />
-      <recent name="D:\ShiroProjects\Shiro_05\src\main\resources\static" />
-      <recent name="D:\ShiroProjects\Shiro_05\src\main\resources" />
+      <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp\WEB-INF" />
+      <recent name="D:\ShiroProjects\Shiro_04\src\main\webapp\WEB-INF\jsp" />
+      <recent name="D:\ShiroProjects\Shiro_02\src\main\resources" />
+      <recent name="D:\ShiroProjects\Shiro_01\src\main\webapp\WEB-INF\jsp\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zelin.filter" />
@@ -501,12 +514,12 @@
       <recent name="com.zelin.test" />
       <recent name="com.zelin.interceptor" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ShiroProjects\Shiro_05" />
       <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp" />
-      <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp\WEB-INF" />
-      <recent name="D:\ShiroProjects\Shiro_04\src\main\webapp\WEB-INF\jsp" />
-      <recent name="D:\ShiroProjects\Shiro_02\src\main\resources" />
-      <recent name="D:\ShiroProjects\Shiro_01\src\main\webapp\WEB-INF\jsp\user" />
+      <recent name="D:\ShiroProjects\Shiro_05\src\main\webapp\jsp" />
+      <recent name="D:\ShiroProjects\Shiro_05\src\main\java\com\zelin" />
+      <recent name="D:\ShiroProjects\Shiro_05\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -654,7 +667,7 @@
       <workItem from="1555286752921" duration="19722000" />
       <workItem from="1555372853045" duration="31227000" />
       <workItem from="1555460219977" duration="15111000" />
-      <workItem from="1555476338774" duration="8531000" />
+      <workItem from="1555476338774" duration="8889000" />
     </task>
     <servers />
   </component>
@@ -691,7 +704,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144070000" />
+    <option name="totallyTimeSpent" value="144428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -703,7 +716,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="7" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -711,10 +724,10 @@
       <window_info id="Favorites" order="3" sideWeight="0.5021552" side_tool="true" weight="0.25" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8401487" visible="true" weight="0.14425983" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.8401487" visible="true" weight="0.21752267" />
       <window_info id="Structure" order="7" sideWeight="0.1598513" side_tool="true" weight="0.25075528" />
       <window_info anchor="bottom" id="Run Dashboard" order="0" weight="0.20981388" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.37055838" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.37563452" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" weight="0.32994923" />
@@ -1152,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Shiro_05/src/main/java/com/zelin/config/ShiroConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        <state relative-caret-position="107">
+          <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
