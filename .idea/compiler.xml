@@ -10,6 +10,7 @@
         <module name="Shiro_02" />
         <module name="Shiro_03" />
         <module name="Shiro_04" />
+        <module name="Shiro_05" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,11 +18,13 @@
       <module name="Shiro_02" target="1.7" />
       <module name="Shiro_03" target="1.7" />
       <module name="Shiro_04" target="1.7" />
+      <module name="Shiro_05" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Shiro_02" options="-parameters" />
+      <module name="Shiro_05" options="-parameters" />
     </option>
   </component>
 </project>

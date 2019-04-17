@@ -1,0 +1,21 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+    <!--diskStore：缓存数据持久化的目录 地址  -->
+    <diskStore path="e:\develop\ehcache" />
+    <defaultCache
+            maxElementsInMemory="1000"
+            maxElementsOnDisk="10000000"
+            eternal="false"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+    </defaultCache>
+    <!--name: cache的名字，用来识别不同的cache，必须惟一。-->
+    <!--maxElementsInMemory: 内存管理的缓存元素数量最大限值。-->
+    <!--maxElementsOnDisk: 硬盘管理的缓存元素数量最大限值。默认值为0，就是没有限制。-->
+    <!--eternal: 设定元素是否持久话。若设为true，则缓存元素不会过期。-->
+    <!--overflowToDisk: 设定是否在内存填满的时候把数据转到磁盘上。-->
+</ehcache>

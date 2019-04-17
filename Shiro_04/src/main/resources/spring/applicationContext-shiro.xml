@@ -42,6 +42,10 @@
                 -->
                 <!--/student/tolist.do = perms["student:tolist"]-->
                 <!--/student/add.do = perms["student:create"]-->
+
+                <!--对rememberMe管理的资源进行放行-->
+                /student/** = user
+                /user/** = user
                 <!--
 					/** = authc 代表系统所有资源需要经过系统认证才能访问，这个顺序放最后
 				-->
@@ -62,6 +66,8 @@
         <property name="realm" ref="customRealm"/>
         <!--2.2）添加缓存管理器-->
         <property name="cacheManager" ref="cacheManager"/>
+        <!--2.3）引入rememberMeManager对象-->
+        <property name="rememberMeManager" ref="rememberMeManager"/>
     </bean>
     <!--3.构造自定义Realm对象-->
     <bean id="customRealm" class="com.zelin.realm.CustomRealm">
@@ -86,5 +92,17 @@
         <!--<property name="passwordParam" value="pwd"/>-->
         <!--6.3)代表更改出错后放到request的默认的错误key的名称，默认叫shiroLoginFailre-->
         <!--<property name="failureKeyAttribute" value="errorKey"/>-->
+    </bean>
+    <!--7.定义rememberMeManager对象-->
+    <bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
+        <!--7.1）为rememeberMe引入cookie对象-->
+        <property name="cookie" ref="simpleCookie"/>
+    </bean>
+    <!--8.定义rememberMeManager依赖的cookie对象-->
+    <bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <!--8.1)设置cookie的到期时间-->
+        <property name="maxAge" value="2592000"/>
+        <!--8.2)指定cookie的名称-->
+        <property name="name" value="rememberMe"/>
     </bean>
 </beans>

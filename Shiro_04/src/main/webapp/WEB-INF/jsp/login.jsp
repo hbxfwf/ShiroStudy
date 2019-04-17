@@ -43,14 +43,14 @@
             <label >输入验证码</label>
             <input type="text" name="validcode" style="width:360px" class="form-control" placeholder="输入验证码">
             <img src="/validatecode.jsp" style="position: relative;top:-34px;left: 365px"/>
-
+            <div style="padding:0;margin-top: -20px;">
+                <input type="checkbox" name="rememberMe">&nbsp;记住我
+            </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
             <span class="error">${message}</span>
         </form>
     </div>
     </div>
-
-
 </div> <!-- /container -->
 </body>
 </html>

@@ -1,0 +1,19 @@
+server:
+  port: 9000
+#配置spring相关
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///shiro
+    username: root
+    password: 123
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  http:
+    encoding:
+      charset: UTF-8
+#配置mybatis
+mybatis:
+  mapper-locations: mapper/*.xml
