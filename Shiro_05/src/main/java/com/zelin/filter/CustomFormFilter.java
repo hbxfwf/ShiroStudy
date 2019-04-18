@@ -2,6 +2,7 @@ package com.zelin.filter;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
+import org.apache.shiro.web.util.WebUtils;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -32,5 +33,10 @@ public class CustomFormFilter extends FormAuthenticationFilter {
             return true;      //代表验证未通过
         }
         return super.onAccessDenied(request, response);
+    }
+    @Override
+    protected void issueSuccessRedirect(ServletRequest request, ServletResponse response) throws Exception {
+        WebUtils.issueRedirect(request,response,getSuccessUrl(),null,true);
+        //super.issueSuccessRedirect(request, response);
     }
 }

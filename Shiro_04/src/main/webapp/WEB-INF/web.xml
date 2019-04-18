@@ -32,7 +32,7 @@
         （1）classpath:代表访问指定类路径下的资源文件
         （2）classpath*:代表访问指定类路径及引入的第三方包中的资源文件。
      -->
-    <param-value>classpath*:spring/applicationContext*.xml</param-value>
+    <param-value>classpath*:spring/spring.xml</param-value>
   </context-param>
   <!-- 2.配置spring的监听器 -->
   <listener> 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

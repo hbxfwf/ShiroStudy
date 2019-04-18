@@ -23,7 +23,7 @@ public class LogController {
     //默认情况下，shiro的用户认证工作由FormAuthenticationFilter(authc)过滤器完成，
     //当出现异常时，shiro会将异常对象的类名放到以shiroLoginFailure为key的request
     //对象中，我们只需要通过此key取出对应的异常类名就可以知道，用户是何种异常
-    public String login(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public String login(HttpServletRequest request) throws Exception {
         //1.得到异常的名称
         String exceptionName = (String) request.getAttribute("shiroLoginFailure");
         //2.根据异常的名称来判断执行的是何种异常，从而处理此异常

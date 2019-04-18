@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
     <!--0.开启shiro对注解的支持-->
     <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
         <property name="securityManager" ref="mySecurityManager"/>
@@ -28,7 +29,7 @@
         <property name="filterChainDefinitions">
             <value>
                 <!-- 配置可以匿名访问的资源 -->
-                /bootstrap-3.3.7-dist/** = anon
+                /bootstrap-3.3.7-dist/*/** = anon
                 <!-- 退出系统 -->
                 /logout.do = logout
                 <!-- 对验证码进行放行 -->
